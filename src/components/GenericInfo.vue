@@ -11,7 +11,7 @@
     data: () => ({
       description: 'Short description goes here'
     })
-  }
+  };
 </script>
 
 <style scoped>
