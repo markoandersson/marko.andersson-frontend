@@ -1,8 +1,27 @@
 language: node_js
+
 node_js:
-  - "10"
+- '10'
 
 before_script:
-  - npm install -g @vue/cli
+- npm install -g @vue/cli
 
 script: npm run test:unit
+
+before_deploy:
+ - npm run build
+
+deploy:
+  provider: s3
+  access_key_id:
+    secure: TU7wnqMzk8fIiBgVU+F5suT3A0b30vwttrHChGGLjCC0fgz3iXQf+y8VFO+nBc3TQJE1ybwe83cTFvl5R+6AfbhV9Gm+Z54yNtPMEomCrLD0XIoPHmbvuFZUxs6t4lcHbggPIAEp+mObVrMZm3fOeGXhD9FBONj+tJBnlOzmy0Xv2oq1Og8FfT/PYnvY6B0ouB2094Vqc4epqOZLB3Uy/dulyYdT/yTZySAm08rElpmFbWjMRIH3k6pWLoMo1uxygH5P4A5TdEYW3uXZR2U7l6RteTXPiDuWNfg14acy19AQL6e+EZhpe1hh3fDFB81cuCIR5hja0TXDZQPEKZWxKF/65+cdWrkQe1XZ1gZmsD/iiEXn3NRf1E/yY3bWsfMn4Pw1Eq1eefzNwnDuH5oSLN2r5tSAtAOfgF9AiWvnFVduiMjUGLN050vT44rwfsn9wbnwaJbo+RmK8TmupLOA6lLOLCuqW63P9QoCou84qNXAf0CoCLAoIAPUTNEWj4lrQ4EmDDNEzE8czYnUnotcdVfh/TIgjFkeE/T81R/ID+0CQlDkWicNK4ZZ3Eq7VFwg63Mg8zST6IWzedqgefoBl2AzRzdzowxcm6Kej6Gg2No6L2n/kr/z6bkP4w4mNDv0SGUYR1j+V/m15xgGMfeKyM8dbbBuRszu8mTOHY00rmg=
+  secret_access_key:
+    secure: tOUZoP+8zyx3aQUAOBgv+xxAyNZiyYHeDLAn4NJrQrpp+csCJbXZOVce/aAa648Vt5qVglenuVozrW2KhAm984ruokrg4jthIHkFiTUTGm+wiUFdwzyPjn/1yK7mSokHEQLTlx1LagAo10CD0GY5UilHqcOsH9G0ijjKGdJ/G7JpwXf7ied/w/c1qOhZ/iW9STNOLN11KipndSSpDuNlYw16RwPNCQzTOV23W+s40SQWcTDxE8A1f0CjGq/V1bXBwrhfPMaz7NAcad1ZYqhAuBQ8qruBOk/f4dDCptKppxGcTfWQLYJEAmuoe3LUtpIkp0bNnMfyTAAP3Xk0/4UyJk3breCiwSEegLAcu3U6C4Z5sLtIsuHzEWBMo4KmvAxA+08bP286sXS68yPeIunv+zFtG9KckCQLXwHktS462uPEjS5S+5nIs527ofNo7YjzuLLWN7S3Dk7GgiaGNYstEbmQbRmSMZj+cBmjKM0xtfM4ZBvOb3LZHGuKOQdBKUmyzVIAXDhsCiSgeyaNssDuMcA9XvPSWjNyqIqDvBvEzQuRS7V82UP12AoZHSZ5jccwvCMWU+KJ1o/2oKG6W4M3JYnZrW8BSZnN810LvjSRPq1kj21b1Sbp3yMjmN6o/Xjyq81xFaa8FQ2CVKG1vtQORibwfhpg/K3eBLTk89FFdt4=
+  bucket: marko-andersson-frontend
+  region: eu-central-1
+  acl: public_read
+  skip_cleanup: true
+  local_dir: dist
+  cache_control: max-age=21600
+  on:
+    branch: master
