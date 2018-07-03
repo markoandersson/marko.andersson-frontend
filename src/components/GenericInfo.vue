@@ -1,16 +1,33 @@
 <template>
   <div>
     <h1>Marko Andersson</h1>
-    <p>{{ description }}</p>
+
+    <LoadingSpinner v-if="loading"/>
+    <p v-else>{{ description }}</p>
   </div>
 </template>
 
 <script>
+  import {RotateSquare as LoadingSpinner} from 'vue-loading-spinner';
+  import {getDescription} from './BackendApi';
   export default {
     name: 'GenericInfo',
-    data: () => ({
-      description: 'Short description goes here'
-    })
+    components: {
+      LoadingSpinner
+    },
+    data() {
+      return {
+        description: '',
+        loading: true
+      };
+    },
+    mounted() {
+      this.loading = true;
+      getDescription().then((description) => {
+        this.description = description;
+        this.loading = false;
+      });
+    }
   };
 </script>
 
