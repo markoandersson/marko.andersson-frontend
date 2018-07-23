@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 export const getDescription = async () => {
-  let response = await axios.get('http://api.icndb.com/jokes/random/1');
+  let response = await axios.get('description', {
+    baseURL: process.env.VUE_APP_BACKEND_URL
+  });
 
-  return response.data.value[0].joke;
+  return response.data.description;
 };
