@@ -1,5 +1,7 @@
-import GenericInfo from './GenericInfo'
+import About from './About';
+import Header from './Header';
 
 export {
-  GenericInfo
-}
+  About,
+  Header
+};

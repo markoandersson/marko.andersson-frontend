@@ -1,19 +1,19 @@
 <template>
-  <div>
-    <h1>Marko Andersson</h1>
-
+  <Jumbotron fluid header="About">
     <LoadingSpinner v-if="loading"/>
     <p v-else>{{ description }}</p>
-  </div>
+  </Jumbotron>
 </template>
 
 <script>
   import {RotateSquare as LoadingSpinner} from 'vue-loading-spinner';
+  import Jumbotron from 'bootstrap-vue/es/components/jumbotron/jumbotron';
   import {getDescription} from './BackendApi';
   export default {
-    name: 'GenericInfo',
+    name: 'About',
     components: {
-      LoadingSpinner
+      LoadingSpinner,
+      Jumbotron
     },
     data() {
       return {
