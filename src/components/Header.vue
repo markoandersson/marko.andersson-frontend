@@ -30,7 +30,6 @@
   .jumbo {
     background-size: cover;
     background-repeat: no-repeat;
-
   }
   @media (min-width: 576px) {
     .jumbo {
