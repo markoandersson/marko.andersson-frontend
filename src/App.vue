@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <GenericInfo />
+    <Header />
+    <About />
 
   </div>
 </template>
 
 <script>
-import {GenericInfo} from './components';
+import {About, Header} from './components';
 
 export default {
   name: 'app',
   components: {
-    GenericInfo
-
+    About,
+    Header
   }
 }
 </script>
@@ -24,6 +25,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 0.8rem;
+  }
 }
 </style>
