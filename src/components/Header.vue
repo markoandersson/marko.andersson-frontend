@@ -6,19 +6,27 @@
       class="cv-button"
       href="https://api.markoandersson.info/resume.json"
     >Get my CV as JSON</Button>
+    <social-icons v-bind:data="social"/>
   </Jumbotron>
+
 </template>
 
 <script>
   import Jumbotron from 'bootstrap-vue/es/components/jumbotron/jumbotron';
   import Button from 'bootstrap-vue/es/components/button/button';
+  import SocialIcons from './SocialIcons';
+
   export default {
     name: 'Header',
+    props: {
+      social: Array
+    },
     components: {
       Jumbotron,
-      Button
+      Button,
+      SocialIcons
     }
-  }
+  };
 </script>
 
 <style scoped>
