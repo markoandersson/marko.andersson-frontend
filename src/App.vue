@@ -1,21 +1,35 @@
 <template>
   <div id="app">
     <Header />
-    <About />
-
+    <About v-bind:description="resume.basics.label" />
   </div>
 </template>
 
 <script>
   import {About, Header} from './components';
+  import {getResumeAsJson} from './BackendApi';
 
   export default {
     name: 'app',
     components: {
       About,
       Header
+    },
+    data() {
+      return {
+        resume: {
+          basics: {}
+        },
+        loading: true
+      };
+    },
+    mounted() {
+      getResumeAsJson().then((resume) => {
+        this.resume = resume;
+        this.loading = false;
+      });
     }
-  }
+  };
 </script>
 
 <style>
