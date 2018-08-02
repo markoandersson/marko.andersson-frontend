@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header v-bind:social="resume.basics.profiles" />
     <About v-bind:description="resume.basics.label" />
   </div>
 </template>

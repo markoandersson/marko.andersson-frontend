@@ -1,14 +1,10 @@
 <template>
   <div class="container">
-    <a href="https://www.linkedin.com/in/markoandersson/">
-      <font-awesome-icon :icon="['fab', 'linkedin']" class="social linkedin" />
+    <span v-for="item in data" v-bind:key="item.network">
+      <a v-bind:href="item.url">
+      <font-awesome-icon :icon="getSocialIcon(item)" :class="getSocilaClass(item)" />
     </a>
-    <a href="https://twitter.com/marko_andersson">
-      <font-awesome-icon :icon="['fab', 'twitter']" class="social twitter" />
-    </a>
-    <a href="https://github.com/markoandersson">
-      <font-awesome-icon :icon="['fab', 'github']" class="social github" />
-    </a>
+    </span>
   </div>
 </template>
 
@@ -22,8 +18,19 @@
 
   export default {
     name: 'SocialIcons',
+    props: {
+      data: Array
+    },
     components: {
       'font-awesome-icon': FontAwesomeIcon
+    },
+    methods: {
+      getSocialIcon: (item) => {
+        return ['fab', item.network.toLowerCase()];
+      },
+      getSocilaClass: (item) => {
+        return 'social ' + item.network.toLowerCase();
+      }
     }
   };
 </script>
