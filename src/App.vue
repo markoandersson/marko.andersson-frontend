@@ -1,7 +1,22 @@
 <template>
   <div id="app">
-    <Header v-bind:social="resume.basics.profiles" />
-    <About v-bind:description="resume.basics.label" />
+    <v-app dark>
+      <v-content>
+        <v-container fluid>
+          <v-layout
+            column
+            wrap
+          >
+            <section>
+              <Header v-bind:social="resume.basics.profiles" />
+            </section>
+            <section>
+              <About v-bind:description="resume.basics.label" />
+            </section>
+          </v-layout>
+        </v-container>
+      </v-content>
+    </v-app>
   </div>
 </template>
 
@@ -38,9 +53,18 @@
     src: url("fonts/LeagueGothic-Regular.otf") format("opentype");
   }
 
-  h1,h2 {
+  h1, h2 {
     font-family: 'LeagueGothic', sans-serif !important;
   }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
   #app {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

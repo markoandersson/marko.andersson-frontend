@@ -1,19 +1,30 @@
 <template>
-  <Jumbotron fluid class="jumbo">
-    <h1 class="text-white display-1 text-center align-middle">I'm Marko Andersson</h1>
-    <h2 class="text-light">Jyväskylä, Finland based Java, Javascript, DevOps, Fullstack, Agile, Lean, Unicorn developer with no freetime for personal projects.</h2>
-    <Button
-      class="cv-button"
-      href="https://api.markoandersson.info/resume.json"
-    >Get my CV as JSON</Button>
-    <social-icons v-bind:data="social"/>
-  </Jumbotron>
+  <v-parallax class="jumbo">
+    <v-layout column
+              align-center
+              justify-space-around
+              class="white--text">
 
+      <v-flex xs12>
+        <h1>I'm Marko Andersson</h1>
+        <h2>Jyväskylä, Finland based Java, Javascript, DevOps, Fullstack, Agile, Lean, Unicorn
+          developer trapped inside corporation and with no freetime for personal projects.</h2>
+      </v-flex>
+      <v-flex xs12>
+        <v-btn small dark
+               class="cv-button"
+               href="https://api.markoandersson.info/resume.json"
+        >Get my CV as JSON
+        </v-btn>
+      </v-flex>
+      <v-flex xs12>
+        <social-icons v-bind:data="social" />
+      </v-flex>
+    </v-layout>
+  </v-parallax>
 </template>
 
 <script>
-  import Jumbotron from 'bootstrap-vue/es/components/jumbotron/jumbotron';
-  import Button from 'bootstrap-vue/es/components/button/button';
   import SocialIcons from './SocialIcons';
 
   export default {
@@ -22,8 +33,6 @@
       social: Array
     },
     components: {
-      Jumbotron,
-      Button,
       SocialIcons
     }
   };
@@ -39,6 +48,7 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   @media (min-width: 576px) {
     .jumbo {
       background-image: url("../images/header-normal.jpeg");

@@ -1,11 +1,12 @@
+<!--suppress CssUnusedSymbol -->
 <template>
-  <div class="container">
+  <v-layout align-center justify-center row class="container">
     <span v-for="item in data" v-bind:key="item.network">
       <a v-bind:href="item.url">
-      <font-awesome-icon :icon="getSocialIcon(item)" :class="getSocilaClass(item)" />
-    </a>
+        <font-awesome-icon :icon="getSocialIcon(item)" :class="getSocilaClass(item)" />
+      </a>
     </span>
-  </div>
+  </v-layout>
 </template>
 
 <script>
@@ -38,7 +39,7 @@
 <style scoped>
 
   .container {
-    margin-top: 16rem;
+    margin-top: 8rem;
   }
 
   .social {
