@@ -1,18 +1,21 @@
 <template>
-  <Jumbotron fluid header="About">
-    <p>{{ description }}</p>
-  </Jumbotron>
+  <v-card>
+    <v-card-title primary-title>
+      <div>
+        <h2 class="mb-0">About</h2>
+      </div>
+    </v-card-title>
+    <v-card-text>
+      <p>{{ description }}</p>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
-  import Jumbotron from 'bootstrap-vue/es/components/jumbotron/jumbotron';
   export default {
     name: 'About',
     props: {
       description: String
-    },
-    components: {
-      Jumbotron
     }
   };
 </script>
