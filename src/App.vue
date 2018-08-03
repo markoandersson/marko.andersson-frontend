@@ -62,26 +62,38 @@
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
 
   #app {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
   }
 
   @media (min-width: 576px) {
     html {
-      font-size: 1rem;
+      font-size: 1rem !important;
     }
   }
 
   @media (max-width: 576px) {
-    html {
-      font-size: 0.8rem;
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
     }
   }
 </style>

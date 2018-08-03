@@ -1,17 +1,16 @@
 <template>
-  <v-parallax class="jumbo">
+  <v-parallax class="jumbo" height="">
     <v-layout column
               align-center
               justify-space-around
               class="white--text">
-
       <v-flex xs12>
         <h1>I'm Marko Andersson</h1>
-        <h2>Jyväskylä, Finland based Java, Javascript, DevOps, Fullstack, Agile, Lean, Unicorn
-          developer trapped inside corporation and with no freetime for personal projects.</h2>
+        <h3>Jyväskylä, Finland based Java, Javascript, DevOps, Fullstack, Agile, Lean, Unicorn
+          developer trapped inside corporation and with no freetime for personal projects.</h3>
       </v-flex>
       <v-flex xs12>
-        <v-btn small dark
+        <v-btn large dark
                class="cv-button"
                href="https://api.markoandersson.info/resume.json"
         >Get my CV as JSON

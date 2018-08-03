@@ -1,9 +1,9 @@
 <template>
-  <v-card>
-    <v-card-title primary-title>
-      <div>
+  <v-card tile class="py-3">
+    <v-card-title primary-title >
+      <v-flex xs12>
         <h2 class="mb-0">About</h2>
-      </div>
+      </v-flex>
     </v-card-title>
     <v-card-text>
       <p>{{ description }}</p>
