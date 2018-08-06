@@ -6,7 +6,9 @@
       </v-flex>
     </v-card-title>
     <v-card-text>
-      <p>{{ description }}</p>
+      <v-flex xs12 md10 offset-md1>
+        {{ description }}
+      </v-flex>
     </v-card-text>
   </v-card>
 </template>
