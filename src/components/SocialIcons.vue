@@ -10,12 +10,12 @@
 </template>
 
 <script>
-  import {library} from '@fortawesome/fontawesome-svg-core';
-  import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
+  import {library} from '@fortawesome/fontawesome-svg-core'
+  import {faGithub, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons'
 
-  import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+  import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
-  library.add(faTwitter, faGithub, faLinkedin);
+  library.add(faTwitter, faGithub, faLinkedin)
 
   export default {
     name: 'SocialIcons',
@@ -27,13 +27,13 @@
     },
     methods: {
       getSocialIcon: (item) => {
-        return ['fab', item.network.toLowerCase()];
+        return ['fab', item.network.toLowerCase()]
       },
       getSocilaClass: (item) => {
-        return 'social ' + item.network.toLowerCase();
+        return 'social ' + item.network.toLowerCase()
       }
     }
-  };
+  }
 </script>
 
 <style scoped>

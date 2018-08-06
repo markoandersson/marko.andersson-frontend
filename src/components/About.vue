@@ -19,7 +19,7 @@
     props: {
       description: String
     }
-  };
+  }
 </script>
 
 <style scoped>

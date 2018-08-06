@@ -15,7 +15,6 @@ module.exports = {
     'vue/script-indent': ['error', 2, {
       'baseIndent': 1
     }],
-    'semi': ['error', 'always'],
     'space-before-function-paren': 'off'
   },
   parserOptions: {

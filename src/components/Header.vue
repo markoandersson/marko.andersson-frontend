@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import SocialIcons from './SocialIcons';
+  import SocialIcons from './SocialIcons'
 
   export default {
     name: 'Header',
@@ -34,7 +34,7 @@
     components: {
       SocialIcons
     }
-  };
+  }
 </script>
 
 <style scoped>

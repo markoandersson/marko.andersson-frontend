@@ -21,8 +21,8 @@
 </template>
 
 <script>
-  import {About, Header} from './components';
-  import {getResumeAsJson} from './BackendApi';
+  import {About, Header} from './components'
+  import {getResumeAsJson} from './BackendApi'
 
   export default {
     name: 'app',
@@ -36,15 +36,15 @@
           basics: {}
         },
         loading: true
-      };
+      }
     },
     mounted() {
       getResumeAsJson().then((resume) => {
-        this.resume = resume;
-        this.loading = false;
-      });
+        this.resume = resume
+        this.loading = false
+      })
     }
-  };
+  }
 </script>
 
 <style>
@@ -68,7 +68,6 @@
   h3 {
     font-size: 1.6rem;
   }
-
 
   #app {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
