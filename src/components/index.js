@@ -1,7 +1,9 @@
-import About from './About'
+import AboutSection from './AboutSection'
 import Header from './Header'
+import SkillsSection from './SkillsSection'
 
 export {
-  About,
+  SkillsSection,
+  AboutSection,
   Header
 }
