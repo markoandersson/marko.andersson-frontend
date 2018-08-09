@@ -11,7 +11,10 @@
               <Header v-bind:social="resume.basics.profiles" />
             </section>
             <section>
-              <About v-bind:description="resume.basics.label" />
+              <AboutSection v-bind:description="resume.basics.label" />
+            </section>
+            <section>
+              <SkillsSection v-bind:skills="enhancedSkills" />
             </section>
           </v-layout>
         </v-container>
@@ -21,13 +24,15 @@
 </template>
 
 <script>
-  import {About, Header} from './components'
+  import {AboutSection, Header, SkillsSection} from './components'
   import {getResumeAsJson} from './BackendApi'
+  import {enrichSkills} from './Skills'
 
   export default {
     name: 'app',
     components: {
-      About,
+      AboutSection,
+      SkillsSection,
       Header
     },
     data() {
@@ -43,6 +48,11 @@
         this.resume = resume
         this.loading = false
       })
+    },
+    computed: {
+      enhancedSkills: function () {
+        return enrichSkills(this.resume.skills)
+      }
     }
   }
 </script>
@@ -67,6 +77,10 @@
 
   h3 {
     font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
   }
 
   #app {

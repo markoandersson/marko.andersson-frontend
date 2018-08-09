@@ -15,7 +15,7 @@
 
 <script>
   export default {
-    name: 'About',
+    name: 'AboutSection',
     props: {
       description: String
     }
