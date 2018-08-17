@@ -31,7 +31,7 @@
       level: {
         type: String,
         required: true
-      },
+      }
     },
     computed: {
       progressValue: function () {
