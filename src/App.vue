@@ -16,6 +16,9 @@
             <section>
               <SkillsSection v-bind:skills="enhancedSkills" />
             </section>
+            <section>
+              <LanguageSection />
+            </section>
           </v-layout>
         </v-container>
       </v-content>
@@ -24,13 +27,14 @@
 </template>
 
 <script>
-  import {AboutSection, Header, SkillsSection} from './components'
+  import {AboutSection, Header, SkillsSection, LanguageSection} from './components'
   import {getResumeAsJson} from './BackendApi'
   import {enrichSkills} from './Skills'
 
   export default {
     name: 'app',
     components: {
+      LanguageSection,
       AboutSection,
       SkillsSection,
       Header
