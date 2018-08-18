@@ -48,14 +48,14 @@
     background-repeat: no-repeat;
   }
 
-  @media (min-width: 576px) {
+  @include desktop {
     .jumbo {
       background-image: url("../images/header-normal.jpeg");
       height: 854px;
     }
   }
 
-  @media (max-width: 576px) {
+  @include mobile {
     .jumbo {
       background-image: url("../images/header-small.jpeg");
       height: 427px;

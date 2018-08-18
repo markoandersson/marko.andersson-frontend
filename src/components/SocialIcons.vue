@@ -53,7 +53,7 @@
     background-color: dimgray;
   }
 
-  @media (max-width: 576px) {
+  @include mobile {
     .social {
       width: 50px;
       height: 50px;

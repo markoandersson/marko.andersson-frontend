@@ -1,5 +1,5 @@
 <template>
-  <v-card tile class="py-3">
+  <v-card tile class="py-3 section">
     <v-card-title primary-title>
       <v-flex xs12>
         <h2 class="mb-0">{{title}}</h2>
@@ -26,5 +26,7 @@
 </script>
 
 <style scoped>
-
+  .section {
+    margin-bottom: 2rem;
+  }
 </style>

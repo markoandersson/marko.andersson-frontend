@@ -70,6 +70,8 @@
 
 <style scoped lang="scss">
 
+  @import "../variables.scss";
+
   $primary: #009688;
   $dark-primary: #303F9F;
   $light-primary: #C5CAE9;
@@ -224,7 +226,7 @@
     left: 2rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @include mobile {
 
     .timeline {
 
