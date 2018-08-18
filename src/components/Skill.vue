@@ -34,7 +34,6 @@
 
   .skill-card {
     margin: 0.5rem;
-    backgroud-image: url('../images/javascript-logo.png')
   }
 
 </style>

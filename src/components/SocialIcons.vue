@@ -36,8 +36,9 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
+  @import "../variables";
   .container {
     margin-top: 8rem;
   }

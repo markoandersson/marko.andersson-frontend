@@ -77,7 +77,9 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+
+  @import "variables";
   @font-face {
     font-family: 'LeagueGothic';
     src: url("fonts/LeagueGothic-Regular.otf") format("opentype");

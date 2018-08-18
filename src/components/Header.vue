@@ -37,7 +37,9 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+  @import "../variables";
 
   .cv-button {
     margin-top: 2rem;

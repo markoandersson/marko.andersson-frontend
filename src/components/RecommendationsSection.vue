@@ -6,6 +6,7 @@
         <v-card light class="card">
           <v-card-media
             :src="require('../images/stock/' + getRandomPicture())"
+            class="image"
             height="300px"
           ></v-card-media>
           <v-card-text>
@@ -51,18 +52,20 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+  @import "../variables";
 
   .carousel {
     height: 40rem;
   }
 
   @include desktop {
-    .carousel
-    {
+    .carousel {
       height: 35rem;
     }
   }
+
   .card {
     height: 100%;
   }

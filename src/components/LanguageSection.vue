@@ -49,8 +49,5 @@
 </script>
 
 <style scoped>
-  .language-title {
-    margin-bottom: 2rem;
-  }
 
 </style>
