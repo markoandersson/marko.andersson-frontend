@@ -20,7 +20,10 @@
               <LanguageSection />
             </section>
             <section>
-              <WorkHistorySection :works="resume.work"/>
+              <RecommendationsSection :references="resume.references"/>
+            </section>
+            <section>
+              <WorkHistorySection :works="resume.work" />
             </section>
           </v-layout>
         </v-container>
@@ -30,13 +33,21 @@
 </template>
 
 <script>
-  import {AboutSection, Header, SkillsSection, LanguageSection, WorkHistorySection} from './components'
+  import {
+    AboutSection,
+    Header,
+    LanguageSection,
+    RecommendationsSection,
+    SkillsSection,
+    WorkHistorySection
+  } from './components'
   import {getResumeAsJson} from './BackendApi'
   import {enrichSkills} from './Skills'
 
   export default {
     name: 'app',
     components: {
+      RecommendationsSection,
       WorkHistorySection,
       LanguageSection,
       AboutSection,
@@ -46,7 +57,8 @@
     data() {
       return {
         resume: {
-          basics: {}
+          basics: {},
+          references: []
         },
         loading: true
       }
