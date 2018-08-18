@@ -110,13 +110,13 @@
     text-align: center;
   }
 
-  @media (min-width: 576px) {
+  @include desktop {
     html {
       font-size: 1rem !important;
     }
   }
 
-  @media (max-width: 576px) {
+  @include mobile {
     h1 {
       font-size: 4rem;
     }

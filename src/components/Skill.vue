@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card light tile class="skill-card" height="5rem">
+    <v-card light tile class="skill-card" height="5.5rem">
       <v-layout>
         <v-flex xs4 v-if="skill.logo">
           <v-card-media

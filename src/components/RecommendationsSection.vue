@@ -57,7 +57,7 @@
     height: 40rem;
   }
 
-  @media (min-width: 576px) {
+  @include desktop {
     .carousel
     {
       height: 35rem;
