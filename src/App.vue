@@ -19,6 +19,9 @@
             <section>
               <LanguageSection />
             </section>
+            <section>
+              <WorkHistorySection :works="resume.work"/>
+            </section>
           </v-layout>
         </v-container>
       </v-content>
@@ -27,13 +30,14 @@
 </template>
 
 <script>
-  import {AboutSection, Header, SkillsSection, LanguageSection} from './components'
+  import {AboutSection, Header, SkillsSection, LanguageSection, WorkHistorySection} from './components'
   import {getResumeAsJson} from './BackendApi'
   import {enrichSkills} from './Skills'
 
   export default {
     name: 'app',
     components: {
+      WorkHistorySection,
       LanguageSection,
       AboutSection,
       SkillsSection,
