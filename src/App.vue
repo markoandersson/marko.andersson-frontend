@@ -23,6 +23,9 @@
               <RecommendationsSection :references="resume.references"/>
             </section>
             <section>
+              <BlogPostsSection />
+            </section>
+            <section>
               <WorkHistorySection :works="resume.work" />
             </section>
           </v-layout>
@@ -39,7 +42,8 @@
     LanguageSection,
     RecommendationsSection,
     SkillsSection,
-    WorkHistorySection
+    WorkHistorySection,
+    BlogPostsSection
   } from './components'
   import {getResumeAsJson} from './BackendApi'
   import {enrichSkills} from './Skills'
@@ -47,6 +51,7 @@
   export default {
     name: 'app',
     components: {
+      BlogPostsSection,
       RecommendationsSection,
       WorkHistorySection,
       LanguageSection,

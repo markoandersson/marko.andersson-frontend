@@ -1,7 +1,7 @@
 <template>
 
   <SiteSection title="Job history">
-    <section class="timeline">
+    <div class="timeline">
       <div class="container">
 
         <div class="timeline-item" v-for="work in works" :key="work.startDate">
@@ -28,7 +28,7 @@
         </div>
 
       </div>
-    </section>
+    </div>
   </SiteSection>
 
 </template>
