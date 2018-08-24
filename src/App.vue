@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <v-app dark>
-      <v-content>
+      <v-progress-linear :indeterminate="true" v-if="loading"></v-progress-linear>
+      <v-content v-if="!loading">
         <v-container fluid>
           <v-layout
             column
