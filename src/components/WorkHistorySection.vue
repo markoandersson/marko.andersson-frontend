@@ -1,6 +1,9 @@
 <template>
 
   <SiteSection title="Job history">
+
+    <p>My professional job history. If you would like to know details about each position, please see my LinkedIn profile which I try to keep up to date.</p>
+
     <div class="timeline">
       <div class="container">
 

@@ -1,5 +1,7 @@
 <template>
   <SiteSection title="Blog posts">
+    <p>I have written a few blog posts over the years, and I'll try to list them here. As you can see, I write only occasionally.</p>
+
     <v-flex xs12 lg8 offset-lg2>
       <v-list three-line class="posts">
         <template v-for="(post, index) in orderedPosts">
