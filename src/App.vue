@@ -21,7 +21,7 @@
               <LanguageSection />
             </section>
             <section>
-              <RecommendationsSection :references="resume.references"/>
+              <RecommendationsSection :references="resume.references" />
             </section>
             <section>
               <BlogPostsSection />
@@ -39,12 +39,12 @@
 <script>
   import {
     AboutSection,
+    BlogPostsSection,
     Header,
     LanguageSection,
     RecommendationsSection,
     SkillsSection,
-    WorkHistorySection,
-    BlogPostsSection
+    WorkHistorySection
   } from './components'
   import {getResumeAsJson} from './BackendApi'
   import {enrichSkills} from './Skills'
@@ -86,6 +86,7 @@
 <style lang="scss">
 
   @import "variables";
+
   @font-face {
     font-family: 'LeagueGothic';
     src: url("fonts/LeagueGothic-Regular.otf") format("opentype");
