@@ -1,5 +1,7 @@
 <template>
   <SiteSection title="Blog posts">
+    <p>I have written a few blog posts over the years, and I'll try to list them here. As you can see, I write only occasionally.</p>
+
     <v-flex xs12 lg8 offset-lg2>
       <v-list three-line class="posts">
         <template v-for="(post, index) in orderedPosts">
@@ -33,7 +35,8 @@
 <script>
   import SiteSection from './SiteSection'
   import sortBy from 'lodash/sortBy'
-  import moment from 'moment'
+  import reverse from 'lodash/reverse'
+  import dayjs from 'dayjs'
 
   export default {
     name: 'BlogPostsSection',
@@ -80,9 +83,11 @@
     },
     computed: {
       orderedPosts: function () {
-        return sortBy(this.posts, (e) => {
-            return moment(e).unix()
+        const posts = sortBy(this.posts, (e) => {
+          return dayjs(e.date).unix()
         })
+
+        return reverse(posts)
       }
     }
   }

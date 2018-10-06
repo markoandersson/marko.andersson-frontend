@@ -1,24 +1,26 @@
 <template>
-    <SiteSection title="Read books">
-      <carousel-3d height="500" :controls-visible="true">
-        <slide v-for="(book, i) in books" :index="i" :key="i">
-          <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
-            <img :data-index="index" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="book.image">
-          </template>
-        </slide>
-      </carousel-3d>
-    </SiteSection>
+  <SiteSection title="Read books">
+    <p>I try to read books to gain new insights into different aspects of software development. They can be either
+      technical, project management or soft skills. Here are some of them listed.</p>
+
+    <v-carousel hide-delimiters interval="4000" v-if="books.length > 0" class="carousel">
+      <v-carousel-item
+        v-for="book in books"
+        :key="book.title"
+        :src="book.image"
+      >
+      </v-carousel-item>
+    </v-carousel>
+  </SiteSection>
 </template>
 
 <script>
-  import { Carousel3d, Slide } from 'vue-carousel-3d'
   import SiteSection from './SiteSection'
+
   export default {
     name: 'ReadBooksSection',
     components: {
-      SiteSection,
-      Carousel3d,
-      Slide
+      SiteSection
     },
     props: {
       books: {
@@ -33,5 +35,12 @@
 </script>
 
 <style scoped>
+
+  .carousel {
+    height: 30rem;
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 </style>
