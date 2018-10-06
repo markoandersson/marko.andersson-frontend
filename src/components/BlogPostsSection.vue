@@ -33,7 +33,8 @@
 <script>
   import SiteSection from './SiteSection'
   import sortBy from 'lodash/sortBy'
-  import moment from 'moment'
+  import reverse from 'lodash/reverse'
+  import dayjs from 'dayjs'
 
   export default {
     name: 'BlogPostsSection',
@@ -80,9 +81,11 @@
     },
     computed: {
       orderedPosts: function () {
-        return sortBy(this.posts, (e) => {
-            return moment(e).unix()
+        const posts = sortBy(this.posts, (e) => {
+          return dayjs(e.date).unix()
         })
+
+        return reverse(posts)
       }
     }
   }
