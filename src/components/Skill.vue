@@ -3,13 +3,14 @@
     <v-card light tile class="skill-card" height="5.5rem">
       <v-layout>
         <v-flex xs4 v-if="skill.logo">
-          <v-card-media
+          <v-img
             v-bind:src="require('../images/' + this.skill.logo)"
             height="100%"
             contain
             class="icon"
+            max-height="5rem"
           >
-          </v-card-media>
+          </v-img>
         </v-flex>
         <v-flex :xs8="skill.logo ? true : false">
           <v-card-title primary-title>

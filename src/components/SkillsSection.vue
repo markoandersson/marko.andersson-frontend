@@ -51,7 +51,7 @@
     },
     methods: {
       showAll: function () {
-        this.showMore = true;
+        this.showMore = true
       }
     }
   }

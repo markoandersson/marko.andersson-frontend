@@ -8,11 +8,11 @@
           <div class="timeline-img"></div>
           <div class="timeline-content">
             <v-card light flat>
-              <v-card-media
+              <v-img
                 :src="require('../images/' + logo(work.company))"
                 height="200px"
                 contain
-              ></v-card-media>
+              ></v-img>
               <v-card-title primary-title>
                 <h1 class="title">{{work.position}}</h1>
               </v-card-title>
@@ -63,8 +63,8 @@
           length: 100,
           separator: ' '
         })
-      },
-    },
+      }
+    }
   }
 </script>
 

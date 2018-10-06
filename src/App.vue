@@ -21,10 +21,13 @@
               <LanguageSection />
             </section>
             <section>
-              <RecommendationsSection :references="resume.references"/>
+              <RecommendationsSection :references="resume.references" />
             </section>
             <section>
               <BlogPostsSection />
+            </section>
+            <section>
+              <ReadBooksSection :books="books"/>
             </section>
             <section>
               <WorkHistorySection :works="resume.work" />
@@ -39,14 +42,15 @@
 <script>
   import {
     AboutSection,
+    BlogPostsSection,
     Header,
     LanguageSection,
     RecommendationsSection,
     SkillsSection,
     WorkHistorySection,
-    BlogPostsSection
+    ReadBooksSection
   } from './components'
-  import {getResumeAsJson} from './BackendApi'
+  import {getReadBooks, getResumeAsJson} from './BackendApi'
   import {enrichSkills} from './Skills'
 
   export default {
@@ -58,7 +62,8 @@
       LanguageSection,
       AboutSection,
       SkillsSection,
-      Header
+      Header,
+      ReadBooksSection
     },
     data() {
       return {
@@ -66,6 +71,7 @@
           basics: {},
           references: []
         },
+        books: [],
         loading: true
       }
     },
@@ -73,6 +79,9 @@
       getResumeAsJson().then((resume) => {
         this.resume = resume
         this.loading = false
+      })
+      getReadBooks().then((books) => {
+        this.books = books
       })
     },
     computed: {
@@ -86,6 +95,7 @@
 <style lang="scss">
 
   @import "variables";
+
   @font-face {
     font-family: 'LeagueGothic';
     src: url("fonts/LeagueGothic-Regular.otf") format("opentype");
