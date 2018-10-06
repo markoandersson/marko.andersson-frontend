@@ -63,8 +63,8 @@
           length: 100,
           separator: ' '
         })
-      },
-    },
+      }
+    }
   }
 </script>
 
