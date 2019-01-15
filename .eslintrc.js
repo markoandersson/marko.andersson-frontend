@@ -15,7 +15,8 @@ module.exports = {
     'vue/script-indent': ['error', 2, {
       'baseIndent': 1
     }],
-    'space-before-function-paren': 'off'
+    'space-before-function-paren': 'off',
+    'object-curly-spacing': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
