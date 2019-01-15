@@ -9,10 +9,10 @@
             wrap
           >
             <section>
-              <Header v-bind:social="resume.basics.profiles" />
+              <Header v-bind:social="resume.basics.profiles" v-bind:label="resume.basics.label" />
             </section>
             <section>
-              <AboutSection v-bind:description="resume.basics.label" />
+              <AboutSection v-bind:description="resume.basics.summary" />
             </section>
             <section>
               <SkillsSection v-bind:skills="enhancedSkills" />
