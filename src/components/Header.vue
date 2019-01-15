@@ -6,8 +6,7 @@
               class="white--text">
       <v-flex xs12>
         <h1>I'm Marko Andersson</h1>
-        <h3>Jyväskylä, Finland based Java, Javascript, DevOps, Fullstack, Agile, Lean, Unicorn
-          developer trapped inside corporation and with no freetime for personal projects.</h3>
+        <h3>{{label}}</h3>
       </v-flex>
       <v-flex xs12>
         <v-btn large dark
@@ -29,7 +28,8 @@
   export default {
     name: 'Header',
     props: {
-      social: Array
+      social: Array,
+      label: String
     },
     components: {
       SocialIcons

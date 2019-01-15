@@ -16,21 +16,21 @@
     "axios": "^0.18.0",
     "dayjs": "^1.7.7",
     "lodash": "^4.17.11",
-    "vue": "^2.5.17",
+    "vue": "^2.5.22",
     "vue-loading-spinner": "^1.0.11",
-    "vuetify": "^1.2.6"
+    "vuetify": "^1.4.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.4",
-    "@vue/cli-plugin-eslint": "^3.0.4",
-    "@vue/cli-plugin-unit-mocha": "^3.0.4",
-    "@vue/cli-service": "^3.0.4",
-    "@vue/eslint-config-standard": "^3.0.4",
-    "@vue/test-utils": "^1.0.0-beta.25",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^3.3.0",
+    "@vue/cli-plugin-unit-mocha": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
+    "@vue/eslint-config-standard": "^3.0.5",
+    "@vue/test-utils": "^1.0.0-beta.28",
     "chai": "^4.2.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.22"
   },
   "browserslist": [
     "> 1%",
