@@ -11,11 +11,10 @@
           <div class="timeline-img"></div>
           <div class="timeline-content">
             <v-card light flat>
-              <v-img
+              <v-lazy-image
                 :src="require('../images/' + logo(work.company))"
                 height="200px"
-                contain
-              ></v-img>
+              ></v-lazy-image>
               <v-card-title primary-title>
                 <h1 class="title">{{work.position}}</h1>
               </v-card-title>
@@ -39,11 +38,13 @@
 <script>
   import SiteSection from './SiteSection'
   import truncate from 'lodash/truncate'
+  import VLazyImage from 'v-lazy-image'
 
   export default {
     name: 'WorkHistorySection',
     components: {
-      SiteSection
+      SiteSection,
+      VLazyImage
     },
     props: {
       works: {
@@ -134,6 +135,13 @@
       content: '';
       display: block;
       clear: both;
+    }
+
+    img {
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      overflow: hidden;
     }
   }
 
