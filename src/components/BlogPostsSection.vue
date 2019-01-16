@@ -12,7 +12,7 @@
             :href="post.link"
           >
             <v-list-tile-avatar size="70" class="avatar">
-              <img :src="post.image">
+              <v-lazy-image :src="post.image" ></v-lazy-image>
             </v-list-tile-avatar>
 
             <v-list-tile-content>
@@ -37,11 +37,13 @@
   import sortBy from 'lodash/sortBy'
   import reverse from 'lodash/reverse'
   import dayjs from 'dayjs'
+  import VLazyImage from 'v-lazy-image'
 
   export default {
     name: 'BlogPostsSection',
     components: {
-      SiteSection
+      SiteSection,
+      VLazyImage
     },
     data() {
       return {

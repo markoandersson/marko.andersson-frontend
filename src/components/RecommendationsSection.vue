@@ -4,15 +4,12 @@
     <v-carousel hide-delimiters interval="10000" v-if="references.length > 0" class="carousel">
       <v-carousel-item v-for="reference in references" :key="reference.name">
         <v-card light class="card">
-          <v-img
+          <v-lazy-image
             :src="require('../images/stock/' + getRandomPicture())"
-            class="image"
-            height="300px"
-          ></v-img>
+            height="100px"
+          ></v-lazy-image>
           <v-card-text>
-            <v-flex xs12 lg6 offset-lg3>
               {{reference.reference}}
-            </v-flex>
           </v-card-text>
         </v-card>
       </v-carousel-item>
@@ -23,11 +20,13 @@
 <script>
   import SiteSection from './SiteSection'
   import sample from 'lodash/sample'
+  import VLazyImage from 'v-lazy-image'
 
   export default {
     name: 'RecommendationsSection',
     components: {
-      SiteSection
+      SiteSection,
+      VLazyImage
     },
     props: {
       references: {
@@ -57,16 +56,26 @@
   @import "../variables";
 
   .carousel {
-    height: 40rem;
+    height: 45rem;
   }
 
   @include desktop {
     .carousel {
       height: 35rem;
     }
+
+    .card img {
+      height: 15rem;
+    }
   }
 
   .card {
     height: 100%;
+
+    img {
+      width:100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
   }
 </style>

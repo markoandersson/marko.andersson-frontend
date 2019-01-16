@@ -1,5 +1,5 @@
 <template>
-  <v-parallax class="jumbo" height="">
+  <v-parallax class="jumbo">
     <v-layout column
               align-center
               justify-space-around

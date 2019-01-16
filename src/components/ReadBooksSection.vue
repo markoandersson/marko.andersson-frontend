@@ -4,7 +4,7 @@
       technical, project management or soft skills. Here are some of them listed.</p>
 
     <v-carousel hide-delimiters interval="4000" v-if="books.length > 0" class="carousel">
-      <v-carousel-item
+      <v-carousel-item lazy
         v-for="book in books"
         :key="book.title"
         :src="book.image"
