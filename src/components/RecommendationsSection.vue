@@ -6,13 +6,10 @@
         <v-card light class="card">
           <v-lazy-image
             :src="require('../images/stock/' + getRandomPicture())"
-            class="image"
-            height="300px"
+            height="100px"
           ></v-lazy-image>
           <v-card-text>
-            <v-flex xs12 lg6 offset-lg3>
               {{reference.reference}}
-            </v-flex>
           </v-card-text>
         </v-card>
       </v-carousel-item>
@@ -59,16 +56,26 @@
   @import "../variables";
 
   .carousel {
-    height: 40rem;
+    height: 45rem;
   }
 
   @include desktop {
     .carousel {
       height: 35rem;
     }
+
+    .card img {
+      height: 15rem;
+    }
   }
 
   .card {
     height: 100%;
+
+    img {
+      width:100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
   }
 </style>
