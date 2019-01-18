@@ -1,21 +1,15 @@
 <template>
   <div>
     <v-card light tile class="skill-card" height="5.5rem">
-      <v-layout>
+      <v-layout row>
         <v-flex xs4 v-if="skill.logo">
-          <v-img
+          <v-lazy-image
             v-bind:src="require('../images/' + this.skill.logo)"
-            height="100%"
-            contain
-            class="icon"
-            max-height="5rem"
           >
-          </v-img>
+          </v-lazy-image>
         </v-flex>
         <v-flex :xs8="skill.logo ? true : false">
-          <v-card-title primary-title>
             <h4>{{skill.name}}</h4>
-          </v-card-title>
         </v-flex>
       </v-layout>
     </v-card>
@@ -23,8 +17,13 @@
 </template>
 
 <script>
+  import VLazyImage from 'v-lazy-image'
+
   export default {
     name: 'Skill',
+    components: {
+      VLazyImage
+    },
     props: {
       skill: Object
     }
@@ -37,4 +36,11 @@
     margin: 0.5rem;
   }
 
+  .skill-card img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+    max-height: 5rem;
+  }
 </style>
