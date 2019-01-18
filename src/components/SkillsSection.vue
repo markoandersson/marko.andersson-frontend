@@ -2,7 +2,7 @@
   <SiteSection title="Skills">
     <v-container grid-list-md fill-height>
       <v-layout wrap>
-        <v-flex d-flex md4 xs12 v-for="(skill, index) in sortedSkills" :key="skill.name" v-if="index < 9 || showMore">
+        <v-flex d-flex xs12 sm6 lg4 v-for="(skill, index) in sortedSkills" :key="skill.name" v-if="index < 9 || showMore">
           <Skill :skill="skill" />
         </v-flex>
         <v-flex xs12>
