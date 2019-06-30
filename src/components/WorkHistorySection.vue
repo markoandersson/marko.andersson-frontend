@@ -19,10 +19,10 @@
                 <h1 class="title">{{work.position}}</h1>
               </v-card-title>
               <v-card-title>
-                <span class="grey--text">{{work.company}}</span>
+                <span>{{work.company}}</span>
               </v-card-title>
               <v-card-title>
-                <span class="grey--text">{{work.startDate}}</span>
+                <span>{{work.startDate}}</span>
               </v-card-title>
 
             </v-card>

@@ -4,6 +4,8 @@
 
 Website that contains some generic information about me and my career. Mostly this is exercise project for learning [Vue.js](https://vuejs.org/)
 
+Take a look at [markoandersson.info](https://markoandersson.info)
+
 ## Tech stack
 
 - [Vue.js](https://vuejs.org/) - for building the front-end

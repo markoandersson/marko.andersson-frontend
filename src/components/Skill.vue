@@ -5,6 +5,7 @@
         <v-flex xs4 v-if="skill.logo">
           <v-lazy-image
             v-bind:src="require('../images/' + this.skill.logo)"
+            alt=""
           >
           </v-lazy-image>
         </v-flex>

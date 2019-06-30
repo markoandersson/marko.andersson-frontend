@@ -6,7 +6,13 @@
           <Skill :skill="skill" />
         </v-flex>
         <v-flex xs12>
-          <v-btn v-on:click.once="showAll" v-if="!showMore">Show more</v-btn>
+          <v-btn
+            name="Show More"
+            v-on:click.once="showAll"
+            v-if="!showMore"
+          >
+            Show more
+          </v-btn>
         </v-flex>
       </v-layout>
     </v-container>

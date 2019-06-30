@@ -11,6 +11,7 @@
       <v-flex xs12>
         <v-btn large dark
                class="cv-button"
+               name="Download CV"
                href="https://api.markoandersson.info/resume.json"
         >Get my CV as JSON
         </v-btn>
